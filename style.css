@@ -53,6 +53,7 @@ body{
     z-index: 1000;
     transition: all 0.3s ease;
     overflow-x: hidden;
+    scrollbar-width: none;
 }
 .sidebar.closed{
     width: 60px;
@@ -481,4 +482,54 @@ body{
 }
 .content-data .goals ul li.incomplete{
     border-left: 10px solid var(--red);
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar{
+        width: 200px;
+    }
+    .main{
+        width: calc(100vw - 60px);
+        left: 200px;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .main nav form .search-field{
+        display: none;
+    }
+    .main nav form .search-btn{
+        width: auto;
+        height: auto;
+        background: transparent;
+        color: var(--text);
+        border-radius: none;
+    }
+    .main nav form.show .search-field{
+        display: block;
+        width: 100%;
+    }
+    .main nav form.show .search-btn{
+        width: 36px;
+        height: 100%;
+        color: var(--background);
+        background: var(--red);
+        border-radius: 0 36px 36px 0;
+    }
+    .main nav form.show~.notification, .content nav form.show~.profile{
+        display: none;
+    }
+    .content .languages {
+        grid-template-columns: 1fr;
+    }
+    .content .header{
+        min-width: 340px;
+    }
+    .content .projects table{
+        min-width: 340px;
+    }
+    .content .goals ul{
+        min-width: 340px;
+    }
 }
