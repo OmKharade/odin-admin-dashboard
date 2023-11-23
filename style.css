@@ -8,6 +8,7 @@
     --accent: rgb(91, 112, 149);
     --green: rgb(88, 175, 60);
     --red: rgb(237, 86, 86);
+    --yellow:rgb(229, 215, 95);
 }
 
 
@@ -263,4 +264,221 @@ body{
 }
 .main nav #theme-toggle:checked+.theme-toggle::before{
     left: calc(100% - (25px - 4px) - 2px);
+}
+
+.content{
+    width: 100%;
+    padding: 36px 24px;
+    max-height: calc(100vh - 56px);
+}
+.content .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.content .header .top-left h1{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+.content .header .top-left ul{
+    display: flex;
+    align-items: center;
+    grid-gap: 16px;
+}
+.content .header .top-left ul li{
+    color: var(--text);
+}
+.content .header .top-left ul li a{
+    color: var(--text);
+    pointer-events: none;
+}
+.content .header .top-left ul li a.active{
+    color: var(--primary);
+    pointer-events: none;
+}
+.content .header .header-button{
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+.content .header .header-button li a{
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 36px;
+    background: var(--primary);
+    color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+    font-weight: 500;
+}
+.content .languages{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 24px;
+    margin-top: 36px;
+}
+.content .languages li{
+    padding: 24px;
+    background: var(--background);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 24px;
+    cursor: pointer;
+}
+.content .languages li .bx{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content .languages li:nth-child(1) .bx{
+    background: var(--secondary);
+    color: var(--primary);
+}
+.content .languages li:nth-child(2) .bx{
+    background: var(--secondary);
+    color: var(--primary);
+}
+.content .languages li:nth-child(3) .bx{
+    background: var(--secondary);
+    color: var(--primary);
+}
+.content .languages li:nth-child(4) .bx{
+    background: var(--secondary);
+    color: var(--primary);
+}
+.content .languages li:nth-child(5) .bx{
+    background: var(--secondary);
+    color: var(--primary);
+}
+.content .languages li:nth-child(6) .bx{
+    background: var(--secondary);
+    color: var(--primary);
+}
+.content .languages span{
+    color: var(--text);
+}
+
+.content .content-data{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 24px;
+    margin-top: 24px;
+    width: 100%;
+    color: var(--dark);
+}
+.content-data>div{
+    border-radius: 20px;
+    background: var(--background);
+    padding: 24px;
+    overflow-x: auto;
+}
+.content-data .projects .header{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    grid-gap: 16px;
+    margin-bottom: 24px;
+}
+.content-data .header h3{
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: 600;
+}
+.content-data .header .bx{
+    cursor: pointer;
+}
+.content-data .projects{
+    flex-grow: 1;
+    flex-basis: 500px;
+}
+.content-data .projects table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.content-data .projects table th{
+    padding-bottom: 12px;
+    font-size: 13px;
+    text-align: left;
+    border-bottom: 1px solid var(--secondary);
+}
+.content-data .projects table td{
+    padding: 16px 0;
+}
+.content-data .projects table tbody tr{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.content-data .projects table tbody tr td:first-child{
+    padding-left: 6px;
+}
+.content-data .projects table tbody tr:hover{
+    background: var(--secondary); 
+}
+.content-data .projects table tbody td .status{
+    font-size: 10px;
+    padding: 6px 16px;
+    color: var(--background);
+    border-radius: 20px;
+    font-weight: 700;
+}
+.content-data .projects table tbody td .status.completed{
+    background: var(--green);
+}
+.content-data .projects table tbody td .status.ongoing{
+    background: var(--yellow);
+}
+.content-data .projects table tbody td .status.upcoming{
+    background: var(--red);
+}
+
+.content-data .goals{
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+.content-data .goals .header{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    grid-gap: 16px;
+    margin-bottom: 24px;
+}
+.content-data .goals ul{
+    width: 100;
+}
+.content-data .goals ul li{    width: 100%;
+    margin-bottom: 16px;
+    background: var(--secondary);
+    padding: 14px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content-data .goals ul li .goal{
+    display: flex;
+    align-items: center;
+}
+.content-data .goals ul li .goal p{
+    margin-left: 6px;
+}
+.content-data .goals ul li .bx{
+    cursor: pointer;
+}
+.content-data .goals ul li.complete{
+    border-left: 10px solid var(--green);
+}
+.content-data .goals ul li.incomplete{
+    border-left: 10px solid var(--red);
 }
