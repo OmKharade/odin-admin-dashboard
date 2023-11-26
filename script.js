@@ -1,7 +1,7 @@
 // toggle dark-light theme
 const themeToggle = document.getElementById('theme-toggle')
 themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark')
+    document.body.classList.toggle('light')
 })
 
 // active sidebar buttons

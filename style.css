@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root{
-    --text: rgb(14, 16, 22);
-    --background: rgb(249, 249, 251);
+    --text: rgb(233, 235, 241);
+    --background: rgb(4, 4, 6);
+    --secondary: rgb(25, 30, 41);
+    --accent: rgb(106, 127, 164);
     --primary: rgb(97, 117, 158);
-    --secondary: rgb(214, 219, 230);
-    --accent: rgb(91, 112, 149);
     --green: rgb(88, 175, 60);
     --red: rgb(237, 86, 86);
     --yellow:rgb(229, 215, 95);
@@ -31,11 +31,11 @@ li{
     list-style: none;
 }
 
-body.dark{
-    --text: rgb(233, 235, 241);
-    --background: rgb(4, 4, 6);
-    --secondary: rgb(25, 30, 41);
-    --accent: rgb(106, 127, 164);
+body.light{
+    --text: rgb(14, 16, 22);
+    --background: rgb(249, 249, 251);
+    --secondary: rgb(214, 219, 230);
+    --accent: rgb(91, 112, 149);
 }
 
 body{
